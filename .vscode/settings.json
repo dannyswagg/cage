@@ -1,0 +1,5 @@
+{
+  "files.autoSaveWorkspaceFilesOnly": true,
+  "files.autoSave": "onWindowChange",
+  "files.autoSaveDelay": 500
+}

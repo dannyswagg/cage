@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: hsl(0, 0%, 86%);
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+}
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card {
+  width: 45%;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1.2rem 1.2rem 7rem 1.2rem;
+  padding: 2.5rem;
+}
+.input {
+  color: hsl(0, 0%, 8%);
+  font-weight: 900;
+  font-size: 1.3rem;
+  width: 7rem;
+  height: 44px;
+  border-radius: 0.5rem;
+  padding: 25px 10px;
+  border: 1px solid hsl(0, 0%, 86%);
+  transition: border-color 0.3s cubic-bezier(0.25, 0.01, 0.25, 1) 0s,
+    color 0.3s cubic-bezier(0.25, 0.01, 0.25, 1) 0s,
+    background 0.2s cubic-bezier(0.25, 0.01, 0.25, 1) 0s;
+}
+input::placeholder {
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+.inputs {
+  gap: 0px 30px;
+  display: flex;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 0.6rem;
+  font-weight: 900;
+  color: hsl(0, 1%, 44%);
+  transition: color 0.3s cubic-bezier(0.25, 0.01, 0.25, 1) 0s;
+  letter-spacing: 2px;
+}
+
+.input:hover,
+.input:focus,
+.input-group:hover .input {
+  outline: none;
+  border-color: hsl(259, 100%, 65%);
+}
+
+.error-border {
+  border: 1px solid hsl(0, 100%, 67%);
+}
+#error-text,
+#error-text1,
+#error-text2 {
+  display: none;
+  color: hsl(0, 100%, 67%);
+  font-size: 0.6rem;
+  margin-top: 5px;
+  font-weight: bold;
+}
+#error-invalid,
+#error-invalid1,
+#error-invalid2 {
+  display: none;
+  color: hsl(0, 100%, 67%);
+  font-size: 0.6rem;
+  margin-top: 5px;
+  font-weight: bold;
+}
+.red {
+  color: hsl(0, 100%, 67%);
+}
+#red {
+  color: hsl(0, 100%, 67%);
+}
+.section {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+hr {
+  background-color: hsl(0, 0%, 94%);
+}
+.arrow {
+  background: hsl(259, 100%, 65%);
+  border-radius: 50%;
+  padding: 20px;
+  width: 70px;
+}
+.arrow:hover {
+  background: hsl(0, 0%, 8%);
+  cursor: pointer;
+}
+.period {
+  font-size: 5rem;
+  font-weight: 800;
+}
+.period:last-child {
+  margin-bottom: 0;
+}
+.timer {
+  display: flex;
+  align-items: center;
+  line-height: 5rem;
+}
+.time-container {
+  display: flex;
+}
+.time {
+  background-color: hsl(259, 100%, 65%);
+  height: 15px;
+  width: 40px;
+  font-weight: 800;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+.data {
+  color: hsl(259, 100%, 65%);
+  font-size: 5rem;
+  font-weight: 800;
+  margin-right: 10px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 600px) {
+  .card {
+    width: 90%;
+    padding: 2rem 1rem;
+  }
+  .inputs {
+    gap: 0 5px;
+  }
+  .input {
+    width: 100%;
+  }
+  .data {
+    font-size: 2.5rem;
+  }
+  .period {
+    font-size: 2.5rem;
+  }
+  .timer {
+    line-height: normal;
+  }
+  .arrow {
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    width: 50px;
+    padding: 15px;
+  }
+  .section {
+    margin: 40px 0px;
+  }
+  hr {
+    width: 100% !important;
+  }
+}
+@media screen and (min-width: 600px) {
+  .card {
+    width: 60%;
+  }
+  .data {
+    font-size: 4rem;
+  }
+  .period {
+    font-size: 4rem;
+  }
+  .inputs {
+    gap: 0 5px;
+  }
+  .input {
+    width: 5rem;
+  }
+  hr {
+    width: 90% !important;
+  }
+}
+@media screen and (min-width: 992px) {
+  .card {
+    width: 45%;
+  }
+  .inputs {
+    gap: 0 30px;
+  }
+  .input {
+    width: 7rem;
+  }
+}

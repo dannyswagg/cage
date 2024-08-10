@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Age calculator app</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="card">
+      <form action="#" class="inputs">
+        <div class="input-group">
+          <label for="day" class="label">DAY</label>
+          <input
+            placeholder="DD"
+            autocomplete="off"
+            name="day"
+            id="day"
+            class="input"
+            type="text"
+          />
+          <p class="error-message" id="error-text">The field is required</p>
+          <p class="error-message" id="error-invalid">Must be a valid day</p>
+        </div>
+        <div class="input-group">
+          <label for="month" class="label">MONTH</label>
+          <input
+            placeholder="MM"
+            autocomplete="off"
+            name="month"
+            id="month"
+            class="input"
+            type="text"
+          />
+          <p class="error-message" id="error-text1">The field is required</p>
+          <p class="error-message" id="error-invalid1">Must be a valid month</p>
+        </div>
+        <div class="input-group">
+          <label for="year" class="label">YEAR</label>
+          <input
+            placeholder="YYYY"
+            autocomplete="off"
+            name="year"
+            id="year"
+            class="input"
+            type="text"
+          />
+          <p class="error-message" id="error-text2">The field is required</p>
+          <p class="error-message" id="error-invalid2">Must be in the past</p>
+        </div>
+      </form>
+      <div class="section">
+        <hr style="width: 90%" class="hr" />
+        <img
+          onclick="calculateAndDisplayAge()"
+          class="arrow"
+          src="./assets/images/icon-arrow.svg"
+          alt=""
+        />
+      </div>
+      <div class="section-2">
+        <div class="timer">
+          <div class="data" id="year-result"></div>
+          <div class="time-container">
+            <div class="time"></div>
+            <div class="time"></div>
+          </div>
+          <div class="period">years</div>
+        </div>
+        <div class="timer">
+          <div class="data" id="month-result"></div>
+          <div class="time-container">
+            <div class="time"></div>
+            <div class="time"></div>
+          </div>
+          <div class="period">months</div>
+        </div>
+        <div class="timer">
+          <div class="data" id="day-result"></div>
+          <div class="time-container">
+            <div class="time"></div>
+            <div class="time"></div>
+          </div>
+          <div class="period">days</div>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
